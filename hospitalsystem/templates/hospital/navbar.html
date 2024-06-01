@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+      .bs-example {
+        margin: 0px;
+      }
+      
+      .navbar-brand {
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+      
+      @media screen and (max-width: 768px) {
+        .navbar-nav {
+          flex-direction: column;
+          display: block;
+        }
+      
+        .navbar-nav .nav-item {
+          margin-right: 0;
+          margin-bottom: 10px;
+          display: block;
+        }
+      }
+      
+      .nav-item.nav-link:hover {
+        transform: scale(1.1);
+      }
+      .nav-item.nav-link {
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="bs-example">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background:#337AB7;">
+        <a href="/" class="navbar-brand">Hospital Management System</a>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ml-auto">
+            <a href="/adminlogin" class="nav-item nav-link active">Administrator</a>
+            <a href="/bloodbank" class="nav-item nav-link active">Blood Bank</a>
+            <a href="/aboutus" class="nav-item nav-link active">About Us</a>
+            <a href="/contactus" class="nav-item nav-link active">Contact Us</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

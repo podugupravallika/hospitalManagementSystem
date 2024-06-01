@@ -1,0 +1,69 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+    <style media="screen">
+        body {
+            background-image: url('{% static "images/bg2.jpg" %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            
+            /* Set text color to white */
+        }
+
+        .jumbotron {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: transparent;
+            /* Set background color to transparent */
+        }
+
+        .jumbotron h5,
+        .jumbotron h1 {
+            text-align: center;
+            margin: 0;
+            /* Remove default margin */
+        }
+
+        .jumbotron .lead {
+            margin-bottom: 1rem;
+            /* Add margin to lead class */
+        }
+
+        .link {
+            color: #ffffff;
+            /* Set link color to white */
+            text-decoration: underline;
+            /* Underline links */
+        }
+
+        .glow {
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #eeeeee, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 50px #5490b3, 0 0 60px #5490b3, 0 0 70px #5490b3;
+            }
+
+            to {
+                text-shadow: 0 0 20px #eeeeee, 0 0 30px #4dbbff, 0 0 40px #4dbbff, 0 0 50px #4dbbff, 0 0 60px #4dbbff, 0 0 70px #4dbbff, 0 0 80px #4dbbff;
+            }
+        }
+    </style>
+</head>
+<div class="jumbotron d-none d-sm-block">
+    <br><br>
+    <a class="link" href="/patientclick"><h1 class="glow">Hello! Click here for an appointment</h1></a>
+</div>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+{% endblock content %}
